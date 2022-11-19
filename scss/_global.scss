@@ -1,0 +1,30 @@
+  
+ 
+body{  
+    min-height: 100vh;  
+    @extend %-lato-500;
+    color: $main-text-color;  
+    background-color: #ededed;
+    font-style: normal; 
+    font-size: 18px; 
+    line-height: 26px;
+} 
+
+ 
+
+ .big-container{ 
+    max-width: 1590px; 
+    margin: 0 auto; 
+    padding: 0 15px; 
+    border: 1px solid green; 
+    border: 1px solid transparent;
+ }
+ 
+  
+ .container{ 
+    max-width: 1290px; 
+    margin: 0 auto; 
+    padding: 0 10px; 
+    border: 1px solid green; 
+    border: 1px solid transparent;
+ }

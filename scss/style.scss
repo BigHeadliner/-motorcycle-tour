@@ -1,0 +1,774 @@
+@import 'vars';
+@import 'fonts';
+@import 'reset';  
+@import 'libs';  
+@import 'global';
+
+ 
+ 
+.header{ 
+    background-image: url('../images/header/header-bg.jpg'); 
+    background-repeat: no-repeat;  
+    background-size: cover;
+    background-position: center;  
+    padding-bottom: 50px;
+    &__top{ 
+        padding: 70px 0; 
+        display: flex; 
+        align-items: center; 
+        justify-content:space-between; 
+        margin-bottom: 80px;
+    }    
+     
+    &__top__menu-social-wrapper{ 
+        display: flex; 
+        align-items: center; 
+    }
+
+    &__top-social{ 
+        display: flex; 
+        margin-left: 73px;
+    } 
+     
+    &__top-social-item{ 
+        width: 50px; 
+        height: 50px; 
+        border-radius: 50%; 
+        border: 3px solid $white; 
+        display: flex; 
+        justify-content: center; 
+        align-items: center;  
+    } 
+     
+    &__top-social-item +  .header__top-social-item{ 
+        margin-left: 29px;
+    }
+     
+        .menu {
+    
+          &__btn {
+            position: relative;
+            width: 50px;
+            height: 40px;
+            border: none;
+            padding: 0;
+            background-color: transparent;
+            transition: all 0.25s;    
+            display: none;
+    
+            .row-top,
+            .row-middle,
+            .row-bottom {
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 45px;
+              height: 3px;
+              background: $white;
+              transform: rotate(0);
+              transition: all 0.5s;
+            }
+    
+            .row-middle {
+              transform: translateY(16px);
+            }
+    
+            .row-bottom {
+              transform: translateY(33px);
+            }
+        
+          }  
+           
+          &__btn.menu__btn--open {
+    
+            .row-top {
+              transform: rotate(45deg) translateY(10px) translateX(13px);
+            }
+  
+            .row-middle {
+              display: none;
+            }
+  
+            .row-bottom {
+              transform: rotate(-45deg) translateY(13px) translateX(-10px);
+            }
+          }
+      
+       &__list{ 
+        display: flex; 
+        align-items: center;
+       }   
+
+       &__item + .menu__item{ 
+          margin-left: 27px;
+       } 
+        
+       &__link { 
+        @extend %-montserrat-400; 
+        color: $white; 
+        text-transform: uppercase; 
+        font-size: 17px; 
+       // text-shadow: 9px 4px 2px rgba(0,0,0,0.64);  
+        padding: 0 1px 7px 1px; 
+        border-bottom: 3px solid transparent;
+        transition: all .3s; 
+        &:hover{ 
+            border-bottom: 3px solid #FFF;
+         } 
+
+       }
+    } 
+     
+    &__main{ 
+        margin: 0 auto; 
+        text-align: center; 
+        position: relative;
+    }   
+
+    &__main-title{ 
+      font-size: 115px; 
+      line-height: 97px; 
+      @extend %-billy-ohio-400;  
+      color: $white; 
+      margin-bottom: 539px;
+    } 
+     
+    &__main-motocykle{ 
+         position: absolute;
+         top: 145px;
+         left: 170px; 
+    }
+}  
+ 
+.tour{   
+    background: #ededed;  
+    background: linear-gradient(0deg, rgba(237,237,237,1) 47%, rgba(255,255,255,1) 73%);
+    padding-bottom: 215px;  
+     
+     
+    &__title{ 
+      @extend %-bebas-neue-700; 
+      font-size: 69px; 
+      color: $night; 
+      text-align: center; 
+      margin: 147px auto 37px;
+    } 
+ 
+    &__text{ 
+      max-width: 819px; 
+      margin: 0 auto 47px; 
+      text-align: center; 
+      color: $night;
+    }
+
+    &__items{ 
+        display: flex; 
+        justify-content: space-between; 
+        align-items: center; 
+    } 
+
+   &__item{ 
+     max-width: 364px; 
+     border: 1px solid transparent;
+   }  
+
+   &__item-img-wrapper{ 
+    position: relative; 
+    border: 1px solid transparent; 
+    margin-bottom: 50px;
+   }  
+
+   &__item-triangle{  
+    width: 0; 
+    height: 0;
+    border: 92px solid $main-red;  
+    position: relative;
+    border-right-color: transparent; 
+    border-top-color: transparent;  
+    position: absolute;
+    bottom: -23px;
+    left: -25px;
+   } 
+    
+   &__item-price{   
+     @extend %-bebas-400; 
+     font-size: 57px;    
+     color: $white;
+     position: absolute; 
+     top: -5px;
+     right: -37px;
+   }     
+    
+   &__item-price--blog{ 
+     font-size: 36px; 
+     width: 207px; 
+     position: absolute;
+     top: -5px;
+     right: -133px;
+   }
+
+   &__item-price-span{ 
+     font-size: 36px;
+   } 
+    
+   &__item-specification{ 
+      width: 100px; 
+      font-size: 22px;  
+      color: $white;
+      @extend  %-bebas-neue-700;
+      position: absolute;
+      top: 36px;
+      left: -42px;
+   }    
+
+   &__item-specification--blog { 
+     position: absolute;
+     top: 36px;
+     left: -73px;
+   }
+
+   &__item-title{ 
+     @extend  %-bebas-neue-700;  
+     font-size: 27px;  
+     margin-bottom: 25px; 
+     line-height: 25px; 
+     line-height: 33px;
+     color: $night;
+   }  
+    
+   &__item-text{ 
+    line-height: 27px; 
+    margin-bottom: 37px;
+   } 
+    
+   &__item-btn{ 
+    width: 115px; 
+    height: 37px; 
+    border-radius: 18px;  
+    @extend %-bebas-neue-700; 
+    font-size: 21px;
+    background: $main-red;  
+    color: $white;
+    padding: 12px 20px 12px 25px; 
+    border: 3px solid transparent; 
+    transition: all .3s; 
+    &:hover{ 
+       background: transparent; 
+       border: 3px solid $main-red;  
+       color:  $main-red;
+    }
+   }
+}  
+ 
+.tour--blog{ 
+  padding-bottom: 83px;
+}   
+ 
+.convince{  
+  background-color:#ededed;  
+  margin-bottom: 115px;
+  &__wrapper{ 
+    position: relative;  
+    display: flex;
+  }  
+
+  &__reasons{ 
+    background-color: $main-red;  
+    padding: 70px 10px 0; 
+    color: $white;   
+    width: 100%;
+    max-width: 610px; 
+    position: absolute;
+    top: -38px;
+    left: -7px;
+  } 
+   
+  &__title{ 
+   @extend  %-bebas-neue-700; 
+   font-size: 69px;
+   margin-bottom: 45px;
+  } 
+   
+  &__subtitle{ 
+     @extend  %-bebas-neue-700;  
+     font-size: 26px; 
+     margin-bottom: 25px;
+  } 
+   
+  &__text{ 
+    max-width: 405px; 
+    color: #e37689; 
+    margin-bottom: 63px; 
+    display: inline-block; 
+    line-height: 37px;
+  } 
+   
+  &__riders{ 
+    color: $white;  
+    width: 100%;
+    max-width: 637px; 
+    padding: 70px 0 0 210px; 
+    margin-left: auto;
+  } 
+   
+  &__rider, 
+  &__rider-mod{ 
+    padding-left: 150px;  
+    max-width: 410px;
+    border: 1px solid transparent; 
+    position: relative; 
+    margin-bottom: 79px;
+  }  
+   
+  &__rider-mod{  
+    padding: 0 150px 0 0;
+  }
+   
+  &__rider-name, 
+  &__rider-name-mod{ 
+    @extend %-bebas-neue-700; 
+    font-size: 47px; 
+    color: #5e5e5e; 
+    margin-bottom: 20px; 
+    position:relative;
+  } 
+   
+  &__rider-position{ 
+    @extend  %-bebas-400;   
+    font-weight: 400; 
+    color: #979797;
+    font-size: 25px; 
+    position: absolute;
+    top: 3px;
+    right: 5px;
+  }  
+   
+  &__rider-position-mod{ 
+    @extend  %-bebas-400;   
+    font-weight: 400; 
+    color: #979797;
+    font-size: 25px; 
+    position: absolute;
+    top: 3px;
+    right: -19px;
+  } 
+   
+  &__rider-text{
+    @extend %-lato-500; 
+    color: #808080; 
+    max-width: 253px; 
+    &::before{ 
+      content: ''; 
+      width: 130px; 
+      height: 130px;   
+      background-image: url('../images/convince/rider1.png'); 
+      background-size: cover;   
+      background-repeat: no-repeat;
+      background-position:center;
+      border-radius: 50%;
+      border: 1px solid transparent; 
+      position: absolute;
+      top: -17px;
+      left: 3px;
+    }
+  }  
+   
+  &__rider-text--third{ 
+    &::before{ 
+      background-image: url('../images/convince/rider3.png'); 
+     }
+    }
+  
+   
+  &__rider-text-mod{  
+    @extend %-lato-500; 
+    color: #808080; 
+    max-width: 253px; 
+    &::before{ 
+      content: ''; 
+      width: 130px; 
+      height: 130px;   
+      background-image: url('../images/convince/rider2.png'); 
+      background-size: cover;   
+      background-repeat: no-repeat;
+      background-position:center;
+      border-radius: 50%;
+      border: 1px solid transparent; 
+      position: absolute;
+      top: -17px;
+      right: 0;
+    } 
+
+  } 
+   
+  &__motocykle{ 
+    position: absolute;
+    top: -80px;
+    left: 445px; 
+  }
+ 
+} 
+ 
+ .worldwide{ 
+  
+   &__title{ 
+      @extend %-bebas-neue-700; 
+      text-align: center; 
+      font-size: 69px; 
+      margin: 30px 0 36px;
+   } 
+
+   &__title-span{ 
+    color: $main-red;
+   }  
+    
+   &__subtitle{ 
+    max-width: 819px; 
+    text-align: center;  
+    margin: 0 auto 95px; 
+    @extend %-lato-500; 
+    color: #5d5c5c; 
+    line-height: 37px;
+   }
+   
+   &__main{ 
+    display: flex; 
+    justify-content: space-between; 
+    position: relative; 
+    border: 1px solid transparent;
+   }
+
+   &__card{ 
+    border: 1px solid transparent; 
+    width: 100%;  
+    max-width: 570px; 
+    text-align: center; 
+    padding: 55px 80px 0;  
+    background: #FFF;
+   } 
+    
+  &__card-item{ 
+    border: 1px solid transparent; 
+    position: relative;  
+    margin-bottom: 70px;
+   
+  }   
+
+  &__card-name{ 
+    @extend %-bebas-neue-700; 
+    font-size: 23px; 
+    color: $night; 
+    &::before{  
+      content: '';
+      height: 70px; 
+      width: 70px;   
+      background-image: url('../images/worldwide/hero.png'); 
+      background-repeat: no-repeat; 
+      background-position: center; 
+      background-size: cover;
+      border-radius: 50%;  
+      border: 1px solid transparent; 
+      position: absolute;
+      top: -7px;
+      left: 65px;
+    }
+  } 
+    
+ &__card-posito{ 
+   @extend %-bebas-400;
+   font-size: 20px;
+ } 
+  
+ &__card-text{ 
+   @extend  %-lato-500; 
+   font-size: 18px; 
+   color:  $night; 
+   margin-bottom: 100px;
+ }
+ 
+ &__img{ 
+  position: absolute;
+  bottom: -1px;
+  right: 180px;
+  }  
+
+ } 
+  
+ .moredetail{ 
+   background-image: url('../images/moredetail/moredetail-bg.jpg'); 
+   background-repeat: no-repeat ; 
+   background-size: cover; 
+   background-position: center; 
+   &__title{ 
+    margin: 95px auto 32px; 
+    @extend  %-bebas-neue-700; 
+    font-size: 69px; 
+    text-align: center; 
+    color: #FFF; 
+    margin-bottom: 30px;
+   }  
+    
+   &__text{ 
+    max-width: 818px; 
+    margin: 0 auto 65px; 
+    color: #FFF; 
+    text-align: center;  
+    line-height: 37px;
+   }
+    
+   &__title-span{ 
+    color: #cd0a2d;
+   } 
+       
+   &__main{ 
+    display: flex; 
+    position: relative;
+   } 
+
+   &__leftside, 
+   &__rightside{ 
+     border: 1px solid transparent;  
+     width: 100%;
+     max-width: 630px;  
+     background-color: rgba(205, 10, 45, 0.45); 
+     padding: 115px 15px 0;
+   }  
+    
+   &__rightside{  
+     background:transparent;
+   }
+    
+   &__leftside-wrapper, 
+   &__rightside-wrapper{ 
+    border: 1px solid transparent; 
+    display: flex; 
+    justify-content: space-between; 
+    max-width: 470px;  
+    padding: 0 45px 0 35px; 
+    margin: 0 147px 97px 0;
+   } 
+    
+   &__rightside-wrapper{  
+     margin: 0 0 80px 127px; 
+     padding: 0 54px; 
+   }
+      
+   &__detail { 
+    text-align: center;
+   }
+
+   &__detail-title, 
+   &__detail-bigt, 
+   &__detail-bigt--rightside{ 
+     @extend %-bebas-neue-700; 
+     font-size: 55px; 
+     color:#FFF;  
+     margin-bottom: 3px;
+   }   
+    
+   &__detail-bigt{  
+    font-size: 87px; 
+    margin-bottom: 15px;
+   } 
+    
+   &__detail-bigt--rightside{  
+      font-size: 123px; 
+      margin-bottom: 47px;
+   }
+    
+  &__detail-span{  
+    font-size: 25px;
+  } 
+   
+  &__detail-bigt-span{ 
+    font-size: 47px;
+  }
+    
+  &__detail-subtitle, 
+  &__detail-bigsub{ 
+    @extend %-bebas-neue-700; 
+    font-size: 29px;  
+    margin-right: 15px;
+    color:#FFF; 
+  } 
+   
+  &__detail-bigsub{  
+    font-size:47px;  
+    margin-right: 29px;
+  }  
+    
+&__details-text{ 
+  color:#FFF; 
+  text-align: center; 
+  margin: 0 130px 147px 0; 
+  max-width: 487px;
+ } 
+  
+ &__details-text--rightside{ 
+   margin: 0  0 147px 147px; 
+ }
+ 
+ &__img{ 
+  position: absolute;
+    top: -35px;
+    left: 445px;
+ }
+
+ } 
+  
+ .jurney{ 
+  background-image: url('../images/jurney/jurney-bg.jpg'); 
+  background-repeat: no-repeat; 
+  background-size: cover; 
+  background-position: center; 
+  text-align: center; 
+  &__title{ 
+    font-size: 69px; 
+    @extend %-bebas-neue-700; 
+    color:#FFF; 
+    margin: 115px 0 38px;
+  }   
+
+  &__subtitle{ 
+    max-width: 825px; 
+    color:#FFF;  
+    margin: 0 auto 183px; 
+    text-align: center; 
+    line-height: 27px;
+  }
+ }
+  
+  
+ .contact{ 
+  
+   &__inner{ 
+    padding-top: 125px;    
+    position: relative;
+   } 
+
+   &__items{ 
+    display: flex; 
+    justify-content: space-between;  
+    border: 1px solid transparent;    
+    
+   }   
+    
+   &__inner{ 
+    position:relative;
+   } 
+
+   &__items{  
+     max-width: 1030px; 
+     margin: 0 auto 65px;
+   }
+
+   &__item{ 
+     border: 1px solid transparent;   
+     width: 100%; 
+     max-width: 307px; 
+     padding-left: 87px; 
+     position: relative; 
+   } 
+     
+   &__item--email::before{ 
+     content: ''; 
+     width: 57px; 
+     height: 45px; 
+     border: 1px solid transparent;   
+     background-image: url('../images/contact/email.png'); 
+     background-repeat: no-repeat; 
+     background-size: cover; 
+     background-position: center; 
+     position: absolute; 
+     top: 10px;
+     left: 10px;
+   }  
+    
+    &__item--phone::before{ 
+    content: ''; 
+    width: 37px; 
+    height: 55px; 
+    border: 1px solid transparent;   
+    background-image: url('../images/contact/phone.png'); 
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    background-position: center; 
+    position: absolute; 
+    top: 10px;
+    left: 27px;
+  }  
+   
+  &__item--address::before{ 
+    content: ''; 
+    width: 53px; 
+    height: 55px; 
+    border: 1px solid transparent;   
+    background-image: url('../images/contact/address.png'); 
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    background-position: center; 
+    position: absolute; 
+    top: 10px;
+    left: 18px;
+  } 
+
+   &__item-title{ 
+     @extend %-bebas-neue-700; 
+     font-size: 26px; 
+     color: $night;  
+     margin-bottom: 19px;
+    }  
+     
+    &__item-email, 
+    &__item-phone, 
+    &__item-address{ 
+      @extend  %-lato-500; 
+      font-size: 17px; 
+      color: $night;   
+      margin-bottom: 10px;
+    } 
+     
+    &__social-items{ 
+      width: 100%; 
+      max-width: 677px; 
+      display: flex; 
+      justify-content: space-between;  
+      margin: 0 auto 77px;
+    }
+  
+    &__social-item{ 
+      width: 67px; 
+      height: 67px; 
+      border-radius: 50%; 
+      border: 3px solid #f0d839; 
+      display: flex; 
+      justify-content: center; 
+      align-items: center;
+    }  
+ 
+   &__location{ 
+    position: absolute;
+    top: -133px;
+    left: 563px;
+   } 
+
+ }  
+  
+  .footer{  
+    text-align: center; 
+    background-color: $main-red; 
+     
+    &__item-first{ 
+      margin: 65px 0 20px;  
+      color: $white; 
+    } 
+     
+    &__item{ 
+      margin-bottom: 65px;
+      color: $white; 
+    }
+  }
+
+@import 'media'; 
+ 
+ 
